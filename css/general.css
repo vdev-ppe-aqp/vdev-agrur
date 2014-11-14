@@ -1,0 +1,67 @@
+/*Feuille de style général */
+
+/*body*/
+body
+{
+	margin:					0px;
+	font-family:			Arial;
+}
+
+/*header*/
+header
+{
+	width:					auto;
+	height:					250px;
+
+	background-color:		rgb(220, 127, 56);
+	background-image:		url(../images/fond2.png);
+	background-image:		no-repeat;
+}
+
+nav
+{
+	width:					auto;
+	height:					50px;
+
+	padding-top:			5px;
+
+	background-color:		rgb(220, 127, 70);
+	box-shadow: 			0px 5px 5px -2px;
+}
+
+nav ul
+{
+	margin-left:			200px;
+}
+
+nav li
+{
+	margin-right:			50px;
+	display:				inline;
+	list-style:				none;
+}
+
+nav li a 
+{
+	color:					black;
+	text-decoration:		none;
+}
+
+nav li a:hover
+{
+	color:					rgb(68, 68, 68);
+}
+
+
+.connexion
+{	
+	width:					300px;
+
+	padding:				50px;
+	margin-left:			auto;
+	margin-right:			auto;
+	text-align:				center;
+
+	background-color:		rgb(166, 166, 166);
+	box-shadow:				0px 5px 5px -2px;
+}

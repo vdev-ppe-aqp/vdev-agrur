@@ -1,0 +1,58 @@
+/*Feuille de style pour les éléments communs */
+
+/*Formulaires*/
+#form_txt
+{
+	width:			230px;
+
+	margin-top:		5px;
+
+	font-family:	Arial;
+	font-size:		20px;
+
+	border-style:	none;
+	border-radius:	2px;
+}
+
+#btn_validation
+{
+	width:				230px;
+	margin-top:			5px;
+	padding:			5px;
+	font-size:			20px;
+
+	border-style:		solid;
+	border-color:		rgb(183, 106, 47);
+	border-width:		1px;
+	border-radius:		5px;
+
+	background-color:	rgb(220, 127, 56);
+}
+
+#btn_validation:hover
+{
+	background-color:	rgb(183, 106, 47);
+	box-shadow:			inset -1px 2px 2px -2px;
+}
+
+#form_link a
+{
+	text-decoration:	none;
+	color:				black;
+}
+
+#form_link a:hover
+{
+	text-decoration:	underline;
+}
+
+
+/*Notifications*/
+#erreur
+{
+	background-color:	rgb(239, 102, 102);
+
+	border-style:		solid;
+	border-width:		1px;
+	border-color:		rgb(203, 31, 31);
+}
