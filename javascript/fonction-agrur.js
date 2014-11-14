@@ -4,8 +4,11 @@
  * @param {string} nomChamp The name of the field to check
  * @return {boolean} Returns
  */
- function veriForm(nomChamp){
- 	var flag;
- 	//Traitements
- 	return flag;
+ function veriChamp(champ){
+ 	var rempli;
+ 	if(champ.value != ''){
+ 		rempli = true;
+ 	}
+ 	return rempli;
  }
+
