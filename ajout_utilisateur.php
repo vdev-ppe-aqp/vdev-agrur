@@ -31,3 +31,52 @@
         }
     }
 ?>
+
+
+<!DOCTYPE html>
+<html>
+    <head> 
+        <?php include('head.html');?>
+
+        <link rel="stylesheet" type="text/css" href="css/communs.css">
+        <link rel="stylesheet" type="text/css" href="css/general.css">
+    </head>
+
+    <body>
+        <header>
+            <?php include('header.php'); ?>
+        </header>
+
+        <div class="formulaire">
+                <h3>Inscription</h3>
+
+                <?php
+                    if(isset($message))
+                    {
+                        echo($message);
+                    }
+                ?>
+
+                <p>Veuillez remplir le formulaire suivant pour créer un compte</p>
+
+                <form method="POST" action="inscription.php">
+                    <label for="txt_nom"></label>
+                    <input type="text" name="txt_nom" id="form_txt" placeholder="Nom" required="required"><br />
+                    <label for="txt_mail"></label>
+                    <input type="mail" name="txt_mail" id="form_txt" placeholder="Adresse m@il" required="required"><br/>
+                    <label for="pw_mdp"></label>
+                    <input type="password" name="pw_mdp" id="form_txt" placeholder="Mot de passe" required="required"><br />
+                    <label for="pw_mdp"></label>
+                    <input type="password" name="pw_mdp" id="form_txt" placeholder="Confirmer mot de passe" required="required"><br />
+                    <label for="ls_type_compte"></label>
+                    <select name="ls_type_compte">
+                        <option value="producteur">Producteur</option>
+                        <option value="client">Client</option>
+                    </select><br />
+
+                    <input type="SUBMIT" name="btn_validation" id="btn_validation" value="Connexion">
+                </form>
+
+
+
+
