@@ -48,6 +48,7 @@
 			$_SESSION['connecte'] = true;
 			$_SESSION['id'] = $enregistrement['id'];
 			$_SESSION['nom'] = $enregistrement['nom'];
+			
 			echo('Connecté !');
 		}
 		elseif($num == 0)
@@ -91,10 +92,9 @@
 						vos services.
 					</p>
 
-					<form method="POST" action="login.php">
+					<form method="POST" action="connexion.php">
 						<input type="text" name="txt_mail" id="form_txt" placeholder="Adresse mail"><br />
 						<input type="password" name="pw_mdp" id="form_txt" placeholder='Mot de passe'><br />
-
 						<input type="submit" name="btn_validation" id="btn_validation" value="Connexion">
 					</form>
 

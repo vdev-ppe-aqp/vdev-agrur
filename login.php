@@ -40,7 +40,9 @@
 	{
 		if(!empty($_POST['txt_mail']) && !empty($_POST['pw_mdp']))
 		{
-			
+			//On encrypte le mot de passe
+			$mdp = sha1($_POST['pw_mdp']);
+
 			//Inclu le script de connexion à la base de données
 			require_once('connexion_BDD.php');
 
@@ -50,7 +52,7 @@
 				//prepare la requete
 				$requetePrepa = $connexion->prepare('SELECT count(*) AS num FROM utilisateur WHERE mail=:mail AND mdp=:mdp');
 				$requetePrepa->bindParam(':mail', $_POST['txt_mail']);
-				$requetePrepa->bindParam(':mdp', $_POST['pw_mdp']);
+				$requetePrepa->bindParam(':mdp', $mdp);
 				//execute la requete
 				$requetePrepa->execute();
 			}
@@ -74,7 +76,7 @@
 					//prepare la requete
 					$req_con = $connexion->prepare('SELECT id, nom FROM utilisateur WHERE mail=:mail AND mdp=:mdp');
 					$req_con->bindParam(':mail', $_POST['txt_mail']);
-					$req_con->bindParam(':mdp', sha1($_POST['pw_mdp']));
+					$req_con->bindParam(':mdp', $mdp);
 
 					//execute la requete
 					$req_con->execute();

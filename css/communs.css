@@ -31,12 +31,32 @@
 
 #msg_err
 {
-	height:				20px;
+	margin-left:		175px;
+
+	height:				150px;
+	width:				100px;
+
 	padding:			5px;
 
 	background-color:	rgb(210, 33, 33);
 	border-style:		solid;
 	border-color:		rgb(138, 24, 24);
+	color:				white;
+	font-size:			10px;
+}
+
+#msg_suc
+{
+	margin-left:		175px;
+
+	height:				20px;
+	width:				100px;
+
+	padding:			5px;
+
+	background-color:	rgb(0, 153, 0);
+	border-style:		solid;
+	border-color:		rgb(0, 102, 0);
 	color:				white;
 	font-size:			10px;
 }

@@ -59,7 +59,7 @@
 
                 <p>Veuillez remplir le formulaire suivant pour créer un compte</p>
 
-                <form method="POST" action="inscription.php">
+                <form method="POST" action="ajout_utilisateur.php">
                     <label for="txt_nom"></label>
                     <input type="text" name="txt_nom" id="form_txt" placeholder="Nom" required="required"><br />
                     <label for="txt_mail"></label>
