@@ -52,6 +52,11 @@ nav li a:hover
 	color:					rgb(68, 68, 68);
 }
 
+ul
+{
+	list-style:				none;
+}
+
 
 .formulaire
 {	

@@ -1,10 +1,10 @@
 <?php 
 	session_start();
 
-	//Vérifie que la variable $_GET est initialisée
-	if(isset($_GET['msg']))
+	//Gestion des messages d'erreur
+	if(isset($_GET['err']))
 	{
-		switch($_GET['msg'])
+		switch($_GET['err'])
 		{
 			case 1:
 				$message = ('<span id="msg_err">Erreur lié à la base de données</span>');
@@ -21,8 +21,25 @@
 			default:
 			break;
 		}
+
+		$message = ('<span id="msg_err">'.$message.'</span>');
 	}
 
+
+	//Gestion des message de succès
+	if(isset($_GET['add']))
+	{
+		switch($_GET['add'])
+		{
+			case 1:
+				$message = ('Modifications enregistrées avec succès !');
+			break;
+		}
+
+		$message = ('<span id="msg_add">'.$message.'</span>');
+	}
+
+	
 	//Connexion à la base de données
 	require('connexion_BDD.php');
 
@@ -141,6 +158,10 @@
 					<tr>
 						<td><!--vide--></td>
 						<td><input type="submit" name="btn_ok" id="btn_validation" value="Enregistrer"></td>
+					</tr>
+					<tr>
+						<td><!--vide--></td>
+						<td><span id="form_link"><a href="menu.php">Retourner au menu</a></span></td>
 					</tr>	
 				</table>
 			</form>

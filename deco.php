@@ -1,8 +1,11 @@
 <?php
 session_start();
-if(isset($_POST['deco']) && $_POST['deco'] == "Deco"){
 
-	unset($_SESSION['login']);
-	header("Location:../formTest.php");
+//'Détruis' la session active
+if(isset($_SESSION))
+{
+	session_destroy();
+	echo('Deconnexion reussie !');
+	header('Location: authentifier.php');
 }
 ?>
